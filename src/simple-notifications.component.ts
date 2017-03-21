@@ -27,7 +27,7 @@ import {Subscription} from 'rxjs/Subscription';
     `,
     styles: [`
         .simple-notification-wrapper {
-            position: relative;
+            position: fixed;
             width: 100%;
             z-index: 1000;
         }
@@ -36,12 +36,6 @@ import {Subscription} from 'rxjs/Subscription';
         .simple-notification-wrapper.top { top: 20px; }
         .simple-notification-wrapper.right { right: 20px; }
         .simple-notification-wrapper.bottom { bottom: 20px; }
-        
-        @media (max-width: 340px) {
-            .simple-notification-wrapper {
-                width: 100%;
-            }
-        }
     `]
 })
 
@@ -55,7 +49,7 @@ export class SimpleNotificationsComponent implements OnInit, OnDestroy {
     @Output() onDestroy = new EventEmitter();
 
     public notifications: Notification[] = [];
-    public position: ['top' | 'bottom', 'right' | 'left' | 'center'] = ['top', 'center'];
+    public position: ['top' | 'bottom' | 'all', 'right' | 'left' | 'full'] = ['all', 'full'];
 
     private lastNotificationCreated: Notification;
     private listener: Subscription;

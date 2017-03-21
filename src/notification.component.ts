@@ -76,10 +76,9 @@ import {NotificationsService} from './notifications.service';
             (mouseleave)="onLeave()">
 
             <div *ngIf="!item.html">
+                <div class="icon" *ngIf="item.type !== 'bare'" [innerHTML]="safeSvg"></div>
                 <div class="sn-title" *ngIf="item.title">{{item.title}}</div>
                 <div class="sn-content">{{item.content | max:maxLength}}</div>
-
-                <div class="icon" *ngIf="item.type !== 'bare'" [innerHTML]="safeSvg"></div>
             </div>
             <div *ngIf="item.html" [innerHTML]="item.html"></div>
 
@@ -104,7 +103,7 @@ import {NotificationsService} from './notifications.service';
 
         .simple-notification .sn-title {
             margin: 0;
-            padding: 0 50px 0 0;
+            padding: 0 0 0 50px;
             line-height: 30px;
             font-size: 20px;
         }
@@ -112,7 +111,7 @@ import {NotificationsService} from './notifications.service';
         .simple-notification .sn-content {
             margin: 0;
             font-size: 16px;
-            padding: 0 50px 0 0;
+            padding: 0 0 0 50px;
             line-height: 20px;
         }
 
@@ -120,14 +119,10 @@ import {NotificationsService} from './notifications.service';
             position: absolute;
             box-sizing: border-box;
             top: 0;
-            right: 0;
+            left: 0;
             width: 70px;
             height: 70px;
-            padding: 10px;
-        }
-
-        .simple-notification .icon svg {
-            fill: #fff;
+            padding: 20px;
         }
 
         .simple-notification.rtl-mode {
@@ -143,10 +138,35 @@ import {NotificationsService} from './notifications.service';
             right: auto;
         }
 
-        .simple-notification.error { background: #F44336; }
+        .simple-notification.error { 
+            background: #FFE4E4;
+            color: #E91616;
+            border: 1px solid #E91515;
+        }
+        .simple-notification.error .icon svg { 
+            fill: #E91616;
+        }
+        
+        .simple-notification.alert { 
+            background: #F9F3D3;
+            color: #8F6E30;
+            border: 1px solid #8F6E30;
+        }
+        .simple-notification.alert .icon svg { 
+            fill: #8F6E30;
+        }
+        
+        .simple-notification.info { 
+            background: #C6E9F6;
+            color: #C6E9F6;
+            border: 1px solid #C6E9F6;
+        }
+        .simple-notification.info .icon svg { 
+            fill: #C6E9F6;
+        }
+       
+        
         .simple-notification.success { background: #8BC34A; }
-        .simple-notification.alert { background: #ffdb5b; }
-        .simple-notification.info { background: #03A9F4; }
 
         .simple-notification .sn-progress-loader {
             position: absolute;
