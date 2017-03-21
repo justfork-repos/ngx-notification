@@ -150,7 +150,6 @@ import {NotificationsService} from './notifications.service';
         .simple-notification.alert { 
             background: #F9F3D3;
             color: #8F6E30;
-            border: 1px solid #8F6E30;
         }
         .simple-notification.alert .icon svg { 
             fill: #8F6E30;
@@ -159,7 +158,6 @@ import {NotificationsService} from './notifications.service';
         .simple-notification.info { 
             background: #C6E9F6;
             color: #C6E9F6;
-            border: 1px solid #C6E9F6;
         }
         .simple-notification.info .icon svg { 
             fill: #C6E9F6;
