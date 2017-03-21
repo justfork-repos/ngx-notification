@@ -157,10 +157,10 @@ import {NotificationsService} from './notifications.service';
         
         .simple-notification.info { 
             background: #C6E9F6;
-            color: #C6E9F6;
+            color: #1592E6;
         }
         .simple-notification.info .icon svg { 
-            fill: #C6E9F6;
+            fill: #1592E6;
         }
        
         
