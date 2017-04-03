@@ -11,6 +11,7 @@ import {Subscription} from 'rxjs/Subscription';
         <div class="simple-notification-wrapper" [ngClass]="position">
             <simple-notification
                 *ngFor="let a of notifications; let i = index"
+                (click)="cleanSingle(a.id)"
                 [item]="a"
                 [timeOut]="timeOut"
                 [clickToClose]="clickToClose"
