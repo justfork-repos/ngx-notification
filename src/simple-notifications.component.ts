@@ -28,7 +28,7 @@ import {Subscription} from 'rxjs/Subscription';
     `,
     styles: [`
         .simple-notification-wrapper {
-            position: absolute;
+            position: fixed;
             left: 0px;
             width: 100%;
             z-index: 1000;
@@ -36,7 +36,7 @@ import {Subscription} from 'rxjs/Subscription';
         
         @media (max-width: 960px) {
             .simple-notification-wrapper {
-                position: absolute;
+                position: fixed;
                 left: 0px;
                 width: 100%;
                 z-index: 1000;
