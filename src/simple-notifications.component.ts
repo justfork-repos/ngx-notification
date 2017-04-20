@@ -30,6 +30,7 @@ import {Subscription} from 'rxjs/Subscription';
         .simple-notification-wrapper {
             position: fixed;
             left: 0px;
+            top: 0px;
             width: 100%;
             z-index: 1000;
         }
