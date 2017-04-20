@@ -28,9 +28,21 @@ import {Subscription} from 'rxjs/Subscription';
     `,
     styles: [`
         .simple-notification-wrapper {
-            position: fixed;
+            position: absolute;
+            top: 100px;
+            left: 0px;
             width: 100%;
             z-index: 1000;
+        }
+        
+        @media (max-width: 960px) {
+            .simple-notification-wrapper {
+                position: absolute;
+                top: 80px;
+                left: 0px;
+                width: 100%;
+                z-index: 1000;
+            }
         }
         
         .simple-notification-wrapper.left { left: 20px; }
