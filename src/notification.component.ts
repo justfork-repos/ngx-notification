@@ -164,11 +164,11 @@ import {NotificationsService} from './notifications.service';
         }
        
         .simple-notification.success { 
-            background: #8BC34A;
-            color: #CEF0A6;
+            background: #CEF0A6;
+            color: #62912b;
         }
         .simple-notification.success .icon svg { 
-            fill: #CEF0A6;
+            fill: #62912b;
         }
 
         .simple-notification .sn-progress-loader {
